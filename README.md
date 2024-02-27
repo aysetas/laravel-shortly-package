@@ -23,7 +23,7 @@ use Aysetas\ShortlyPackage\Facades\Shortly;
 
 $shortUrl = Shortly::getUrl('https://example.com');
 
-echo $shortUrl; //lu8TSUzec
+echo $shortUrl; // http://short.ly/lu8TSUzec
 ```
 
 #### Kısa Linki Eski Hale Dönüştürme
@@ -37,7 +37,7 @@ $shortCode = "lu8TSUzec";
 
 $originalUrl = Shortly::expandUrl($shortCode);
 
-echo $originalUrl;
+echo $originalUrl; // 'https://example.com'
 ```
 
 #### Linkte Tıklama Sayısı Alma

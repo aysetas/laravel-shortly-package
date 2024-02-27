@@ -1,4 +1,4 @@
-# Laravel Shortly Package
+# Laravel Shortly Url Package
 
 Laravel Shortly Package, Laravel projelerinde kolayca linkleri kısaltmanıza olanak tanır.
 

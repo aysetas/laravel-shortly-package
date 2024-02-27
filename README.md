@@ -7,7 +7,7 @@ Laravel Shortly Package, Laravel projelerinde kolayca linkleri kısaltmanıza ol
 Paketi Composer kullanarak kurabilirsiniz:
 
 ```bash
-composer require aysetas/laravel-shortly-package
+composer require aysetas/laravel-shortly-url
 ```
 
 ## Kullanım

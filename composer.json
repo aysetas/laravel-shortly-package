@@ -4,7 +4,8 @@
     "keywords": ["laravel", "package", "short", "url", "link"],
     "type": "package",
     "license": "MIT",
-    "minimum-stability": "^1.0.0",
+    "minimum-stability": "dev",
+    "version": "^1.0.0",
     "autoload": {
         "psr-4": {
             "Aysetas\\ShortlyPackage\\": "src/"

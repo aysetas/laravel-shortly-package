@@ -4,6 +4,7 @@ namespace Aysetas\ShortlyPackage\Services;
 
 
 use Aysetas\ShortlyPackage\Models\ShortUrl;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Str;
 use Sqids\Sqids;
@@ -35,18 +36,17 @@ class ShortlyService
     }
 
     /**
-     * Converts the generated short URL to the original target URL
-     *
      * @param $shortCode
-     * @return string|null
+     * @return RedirectResponse|null
      */
-    public function expandUrl($shortCode): string|null
+    public function expandUrl($shortCode): RedirectResponse|null
     {
         $url = ShortUrl::whereCode($shortCode)
             ->firstOrFail();
         if ($url) {
             $url->increment('hits');
-            return $url->url;
+
+            return redirect()->away($url->url);
         }
         return null;
     }
@@ -61,5 +61,6 @@ class ShortlyService
     {
         return ShortUrl::where('code', $shortCode)->value('hits') ?? 0;
     }
+
 
 }

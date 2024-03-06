@@ -30,5 +30,10 @@
                   "Shortly": "Aysetas\\ShortlyPackage\\Facade\\Shortly"
                }
            }
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "@php artisan package:make-config"
+        ]
     }
 }

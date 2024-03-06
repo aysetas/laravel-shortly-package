@@ -31,7 +31,7 @@ class ShortlyService
                 'hits' => 0,
             ]);
 
-            return 'http://short.ly/' . $shortCode;
+            return config('shortly.shortly_domain') . $shortCode;
         });
     }
 
